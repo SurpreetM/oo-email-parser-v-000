@@ -13,6 +13,7 @@ class EmailParser
   def parse
     # split by commas or spaces
     array = @emails.split(/[,|\s]/).uniq
+    # removes blanks caused by emails separated out by a comma and a space 
     array.reject { |email| email.empty? }
   end
 
