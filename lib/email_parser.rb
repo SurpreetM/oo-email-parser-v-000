@@ -11,7 +11,8 @@ class EmailParser
   end
 
   def parse
-    @emails.split(/[","|" "]/)
+    array = @emails.split(/[","|" "]/)
+    array.reject { |email| email.empty? } 
   end
 
 end
