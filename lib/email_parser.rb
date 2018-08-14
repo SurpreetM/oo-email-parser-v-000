@@ -13,7 +13,7 @@ class EmailParser
   def parse
     # split by commas or spaces
     array = @emails.split(/[,|\s]/).uniq
-    #array.reject { |email| email.empty? }
+    array.reject { |email| email.empty? }
   end
 
 end
